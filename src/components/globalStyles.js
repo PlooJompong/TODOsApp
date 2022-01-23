@@ -32,7 +32,7 @@ const globalStyles = StyleSheet.create({
     height: 160,
     left: 134,
     top: 171,
-    borderWidth: 0.5,
+    borderWidth: 1,
     borderRadius: 100,
   },
 
@@ -42,24 +42,30 @@ const globalStyles = StyleSheet.create({
     justifyContent: "center",
     width: "100%",
     height: 45,
-    top: 355,
+    top: 370,
   },
 
   welcomeText: {
-    fontSize: 32,
-    fontWeight: "bold",
+    fontSize: 28,
+    fontFamily: "Poppins_700Bold",
     color: "rgba(41,52,98,0.87)",
   },
 
-  period: {
+  periodContainer: {
     position: "absolute",
-    width: "100%",
+    width: "80%",
     top: 400,
+    left: "10%",
     height: 80,
+    justifyContent: "center",
+    // backgroundColor: "pink" //Debug
+  },
+
+  period: {
+    width: "100%",
     flexDirection: "row",
     justifyContent: "space-evenly",
-    alignItems: "center",
-    backgroundColor: "lightblue" //Debug
+    // backgroundColor: "lightblue" //Debug
   },
 
   periodText: {
@@ -68,11 +74,12 @@ const globalStyles = StyleSheet.create({
   },
 
   periodTextActive: {
-    fontWeight: "bold",
+    fontFamily: "Poppins_700Bold",
     color: "rgba(63, 61, 86, 0.8)",
   },
 
   periodTextInactive: {
+    fontFamily: "Poppins_400Regular",
     color: "rgba(63, 61, 86, 0.5)",
   },
 

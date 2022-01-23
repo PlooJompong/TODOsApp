@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, View, Image } from 'react-native';
-import globalStyles from "../styles/globalStyles";
+import globalStyles from "./globalStyles";
 
 const Header = () => {
   return (
@@ -15,24 +15,26 @@ const Header = () => {
       </View>
 
       <View style={globalStyles.welcomeContainer} >
-        <Text style={globalStyles.welcomeText}>Welcome back!</Text>
+        <Text style={globalStyles.welcomeText}>Welcome back Emma!</Text>
       </View>
 
       {/* Period */}
-      <View style={globalStyles.period}>
-        <View>
-          <Text style={[globalStyles.periodText, globalStyles.periodTextActive]}>Today</Text>
-          <View style={[globalStyles.underline, globalStyles.underlineActive]}></View>
-        </View>
+      <View style={globalStyles.periodContainer}>
+        <View style={globalStyles.period}>
+          <View>
+            <Text style={[globalStyles.periodText, globalStyles.periodTextActive]}>Today</Text>
+            <View style={[globalStyles.underline, globalStyles.underlineActive]}></View>
+          </View>
 
-        <View>
-          <Text style={[globalStyles.periodText, globalStyles.periodTextInactive]}>Week</Text>
-          <View style={[globalStyles.underline, globalStyles.underlineInactive]}></View>
-        </View>
+          <View>
+            <Text style={[globalStyles.periodText, globalStyles.periodTextInactive]}>Week</Text>
+            <View style={[globalStyles.underline, globalStyles.underlineInactive]}></View>
+          </View>
 
-        <View>
-          <Text style={[globalStyles.periodText, globalStyles.periodTextInactive]}>Month</Text>
-          <View style={[globalStyles.underline, globalStyles.underlineInactive]}></View>
+          <View>
+            <Text style={[globalStyles.periodText, globalStyles.periodTextInactive]}>Month</Text>
+            <View style={[globalStyles.underline, globalStyles.underlineInactive]}></View>
+          </View>
         </View>
 
       </View>
