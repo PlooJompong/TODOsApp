@@ -2,7 +2,7 @@
   "expo": {
     "name": "TODOsApp",
     "slug": "TODOsApp",
-    "version": "1.0.0",
+    "version": "1.0.3",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -13,17 +13,19 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.SiamGhost.TODOsApp",
+      "buildNumber": "1.0.3"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.SiamGhost.TODOsApp",
+      "versionCode": 3
     },
     "web": {
       "favicon": "./assets/favicon.png"

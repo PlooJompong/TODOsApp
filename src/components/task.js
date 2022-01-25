@@ -1,66 +1,97 @@
 import React from "react";
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, TextInput } from "react-native";
+import globalStyles from "./globalStyles";
 
 const Task = () => {
   return (
-    <View style={styles.taskContainer}>
-      <View style={styles.boxContainer}>
-        <View style={styles.box}>
-          <Text style={{}}></Text>
+    <View style={taskStyles.container}>
+      <View style={taskStyles.todosContainer}>
+        <View style={taskStyles.todosTextContainer}>
+          <Text style={[globalStyles.textBold, { fontSize: 32, color: "#404971" }]}>TODOs</Text>
         </View>
-        <View style={styles.box}>
-          <Text style={{}}></Text>
-        </View>
-      </View>
 
-      <View style={styles.boxContainer}>
-        <View style={styles.box}>
-          <Text style={{}}></Text>
-        </View>
-        <View style={styles.box}>
-          <Text style={{}}></Text>
-        </View>
-      </View>
+        <View style={taskStyles.test}>
+          <View style={taskStyles.taskContainer}>
+            <View style={taskStyles.taskField}>
+              <Text>Hello</Text>
+            </View>
+            <Text>icon</Text>
+            <Text>icon2</Text>
+          </View>
 
-      <View style={styles.boxContainer}>
-        <View style={styles.box}>
-          <Text style={{}}></Text>
+          <View style={taskStyles.inputContainer}>
+            <View style={taskStyles.input}>
+              <TextInput placeholder="Hello" />
+            </View>
+            <Text>icon3</Text>
+          </View>
         </View>
-        <View style={styles.box}>
-          <Text style={{}}></Text>
-        </View>
+
       </View>
-      <View style={styles.underline}></View>
+      <Text style={taskStyles.underline}></Text>
     </View >
   )
 }
 
-const styles = StyleSheet.create({
-  taskContainer: {
-    position: "absolute",
+const taskStyles = StyleSheet.create({
+  container: {
     width: "100%",
-    height: "auto",
-    top: 470,
-    alignItems: "center"
-    // backgroundColor: "pink", //Debug
+    height: 420,
+    alignItems: "center",
+    // backgroundColor: "#666", //Debug
   },
 
-  boxContainer: {
-    position: "relative",
+  todosContainer: {
+    width: "90%",
+    height: 420,
+    borderRadius: 10,
+    backgroundColor: "#efefef"
+  },
+
+  todosTextContainer: {
+    paddingVertical: 10,
+    alignItems: "center",
+    // backgroundColor: "#444", //Debug
+  },
+
+  taskContainer: {
     flexDirection: "row",
     justifyContent: "space-evenly",
-    paddingVertical: 10,
-    width: "90%",
-    height: "auto",
-    // backgroundColor: "#888", //Debug
+    alignItems: "center",
+    backgroundColor: "lightblue",
   },
 
-  box: {
-    width: "35%",
-    height: 120,
-    backgroundColor: "#fff",
+  taskField: {
+    width: "55%",
+    paddingVertical: 4,
+    justifyContent: "center",
+    alignItems: "center",
     borderWidth: 1,
-    borderRadius: 15,
+    borderRadius: 5,
+    borderColor: "#404971",
+    // backgroundColor: "pink" //Debug
+  },
+
+  inputContainer: {
+    flexDirection: "row",
+    justifyContent: "space-evenly",
+    alignItems: "center",
+    backgroundColor: "#888" //Debug
+  },
+
+  input: {
+    width: "60%",
+    paddingVertical: 5,
+    borderWidth: 1,
+    borderRadius: 5,
+    borderColor: "#404971",
+    // backgroundColor: "#888" //Debug
+  },
+
+  test: {
+    height: "80%",
+    justifyContent: "space-between",
+    // backgroundColor: "red", //Debug
   },
 
   underline: {

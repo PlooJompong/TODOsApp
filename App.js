@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, View, ActivityIndicator, } from 'react-native';
 import { useFonts, Poppins_400Regular, Poppins_700Bold } from '@expo-google-fonts/poppins';
 import Header from './src/components/header';
+import Category from './src/components/category';
 import Task from './src/components/task';
 
 export default function App() {
@@ -9,21 +10,22 @@ export default function App() {
 
   if (!fontsLoaded) {
     return (
-      <View style={[styles.container, styles.delay]}>
+      <View style={[appStyles.container, appStyles.delay]}>
         <ActivityIndicator size="large" color="#78b7bb" />
       </View>
     )
   } else {
     return (
-      <View style={styles.container}>
+      <View style={appStyles.container}>
         <Header />
+        {/* <Category /> */}
         <Task />
       </View >
     )
   }
 }
 
-const styles = StyleSheet.create({
+const appStyles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#dfe2e1",
