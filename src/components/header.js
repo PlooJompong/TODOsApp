@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, View, Image, StyleSheet } from 'react-native';
-import globalStyles from "./globalStyles";
+import globalStyles from "./style/GlobalStyles";
 
 const Header = () => {
   return (
