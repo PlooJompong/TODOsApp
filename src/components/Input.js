@@ -1,39 +1,37 @@
 import React, { useState } from "react";
 import { View, StyleSheet, TextInput, TouchableOpacity } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
+import globalStyles from "./style/GlobalStyles";
 
-const Input = () => {
+const Input = ({ addTask }) => {
+  const [task, setTask] = useState("");
+
+  const changeHandler = (val) => {
+    setTask(val);
+  }
+
   return (
-    <View style={inputStyles.inputWrapper}>
-      <View style={inputStyles.input}>
-        <TextInput placeholder="Add todo" />
-      </View>
+    <View style={globalStyles.wrapper}>
+      <TextInput placeholder="Add todo" onChangeText={changeHandler} style={inputStyles.input} />
 
-      <TouchableOpacity>
-        <AntDesign name="plussquare" size={30} color="#404971" />
+      <TouchableOpacity onPress={() => addTask(task)}>
+        <AntDesign name="plussquare" size={24} style={globalStyles.icon} />
       </TouchableOpacity>
-    </View>
+    </View >
   )
 }
 
 const inputStyles = StyleSheet.create({
-  inputWrapper: {
-    width: "100%",
-    marginVertical: 10,
-    flexDirection: "row",
-    justifyContent: "space-evenly",
-    alignItems: "center",
-    // backgroundColor: "#999" //Debug
-  },
-
   input: {
     width: "70%",
-    paddingVertical: 10,
+    padding: 10,
+    marginBottom: 10,
+    fontSize: 16,
+    color: "#404971",
     borderBottomWidth: 2,
     borderRadius: 5,
-    // borderBottomColor: "rgba(120, 183, 187, 0.6)",
-    borderBottomColor: "#404971",
-    // backgroundColor: "#888" //Debug
+    borderColor: "#404971",
+    // backgroundColor: "lightblue" //Debug
   },
 });
 

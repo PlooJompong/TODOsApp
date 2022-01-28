@@ -2,7 +2,7 @@
   "expo": {
     "name": "TODOsApp",
     "slug": "TODOsApp",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -17,7 +17,7 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.SiamGhost.TODOsApp",
-      "buildNumber": "1.0.4"
+      "buildNumber": "1.0.5"
     },
     "android": {
       "adaptiveIcon": {
@@ -25,7 +25,7 @@
         "backgroundColor": "#FFFFFF"
       },
       "package": "com.SiamGhost.TODOsApp",
-      "versionCode": 4
+      "versionCode": 5
     },
     "web": {
       "favicon": "./assets/favicon.png"
