@@ -1,12 +1,14 @@
 import React from 'react';
-import { StyleSheet, View, ActivityIndicator } from 'react-native';
+import { StyleSheet, View, ActivityIndicator, Platform } from 'react-native';
 import { useFonts, Poppins_400Regular, Poppins_700Bold } from '@expo-google-fonts/poppins';
 import Header from './src/components/Header';
 import TodoList from './src/components/TodoList';
 
 export default function App() {
+  //import font
   const [fontsLoaded] = useFonts({ Poppins_400Regular, Poppins_700Bold });
 
+  //check if font is loaded
   if (!fontsLoaded) {
     return (
       <View style={[appStyles.container, appStyles.delay]}>
@@ -28,7 +30,17 @@ export default function App() {
 const appStyles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#dfe2e1",
+    ...Platform.select({
+      ios: {
+        backgroundColor: "#dfe2e1"
+      },
+      android: {
+        backgroundColor: "red"
+      },
+      default: {
+        backgroundColor: "lightblue"
+      }
+    })
   },
 
   body: {

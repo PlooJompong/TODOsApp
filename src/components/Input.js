@@ -11,9 +11,11 @@ const Input = ({ addTask }) => {
   }
 
   return (
+    //input
     <View style={globalStyles.wrapper}>
       <TextInput placeholder="Add todo" onChangeText={changeHandler} style={inputStyles.input} />
 
+      {/* Plus icon */}
       <TouchableOpacity onPress={() => addTask(task)}>
         <AntDesign name="plussquare" size={24} style={globalStyles.icon} />
       </TouchableOpacity>

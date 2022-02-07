@@ -5,9 +5,11 @@ import { FontAwesome } from "@expo/vector-icons";
 
 const TodoItem = ({ item, removeTask }) => {
   return (
+    //new task
     <View style={globalStyles.wrapper}>
       <Text style={[todoItemStyles.list, globalStyles.textRegular]}>{item.text}</Text>
 
+      {/* Trash icon */}
       <TouchableOpacity onPress={() => removeTask(item.id)}>
         <FontAwesome name="trash-o" size={30} style={globalStyles.icon} />
       </TouchableOpacity>
